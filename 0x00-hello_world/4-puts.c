@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-/*
- * main  - orints the phrase
+/**
+ * main  - A program that prints with puts function
  * Programming is like building a multilingual puzzle, followed by a new line
+ * Return: 0 (Success)
  */
 int main(void)
 {
