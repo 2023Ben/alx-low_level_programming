@@ -11,9 +11,8 @@ char ch[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 int i;
 
 for (i = 0; i < 52; i++)
-{
+
 putchar(ch[i]);
 putchar('\n');
-}
 return (0);
 }
