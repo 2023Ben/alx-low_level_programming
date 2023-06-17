@@ -1,16 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - A program that prints lowercase and uppercase
- * Return:0 success
- */
+* main - A program that does all alphabet
+* Return:0 success
+*/
 
 int main(void)
 {
-	int vat;
-	for (vat = 'a';vat <= 'Z';vat++)
-	{
-		putchar(vat);
-	}
-	return (0);
+char ch[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+int i;
+
+for (i = 0; i < 52; i++)
+{
+putchar(ch[i]);
+putchar('\n');
+}
+return (0);
 }
