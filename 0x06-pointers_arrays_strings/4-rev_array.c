@@ -1,13 +1,21 @@
 #include "main.h"
 
-void reverse_array(int *a, int n)
+/**
+ * string_toupper - changes all lowercase letters of a string
+ * to uppercase
+ * @s: string to modify
+ *
+ * Return: the resulting string
+ */
+char *string_toupper(char *s)
 {
-	int y, x;
-	
-	y = 0;
-	while (a[y] == '\0')
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		y++;
-		x = a[y];
-		a[y] = 
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
 	}
+
+	return (s);
+}
