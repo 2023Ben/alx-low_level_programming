@@ -16,6 +16,6 @@ while (z <= (n - 1))
 s[z] = b;
 z++;
 }
-return (0);
+return (s);
 }
 
