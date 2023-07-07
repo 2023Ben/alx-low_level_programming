@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, c, product;
+	int i, b, c, product;
 	char error[10] = "Error";
 
 	if (argc != 3)
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		printf("%s\n", error);
 		return (1);
 	}
-	for (i = 0; i < argc; a++)
+	for (i = 0; i < argc; i++)
 	{
 		b = atoi(*(argv + 1));
 		c = atoi(argv[2]);
