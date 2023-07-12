@@ -16,12 +16,12 @@ unsigned int j;
 char *s;
 
 if (size <= 0)
-return  0;
+return  (0);
 
 s = malloc(sizeof(char) * size);
 if (s == 0)
 return (0);
-for ( j = 0; j <= size; j++)
+for (j = 0; j <= size; j++)
 {
 *(s + j) = c;
 }
