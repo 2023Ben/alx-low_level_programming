@@ -19,8 +19,10 @@ return (0);
 va_start(ap, n);         /* Initialize the argument list. */
 
 mat = 0;
-for (i = 0; i < n; i++)
+for (i = 0; i < n; i++);
+{
 mat += va_arg(ap, const unsigned int);    /* Get the next argument value. */
+}
 
 va_end(ap);                  /* Clean up. */
 return (mat);
