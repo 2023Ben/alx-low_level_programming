@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	else
 		sep = (char *) separator;
 	va_start(str, n);
-	
+
 	if (n > 0)
 		printf("%s",  va_arg(str, char *));
 	for (x = 1; x < n; x++)
@@ -30,6 +30,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			prt = "(nil)";
 		printf("%s%s", sep, prt);
 	}
-	printf ("\n");
+	printf("\n");
 	va_end(str);
 }
