@@ -12,7 +12,7 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int harin_h = 0;
+	unsigned int hurin_h = 0;
 
 	while (head != NULL)
 	{
