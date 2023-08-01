@@ -1,49 +1,47 @@
 #include "lists.h"
+
 /**
- * insert_nodeint_at_index - inserts node at a particula index
- * @head : pointer to the list
- * @idx : position to insertt node
- * Return : new node
+ * insert_nodeint_at_index - insert node at the nth index of a linkedlist
+ * @idx: index where the node should be added
+ * @n: value of the node to be added
+ * @head: the head of the list
+ * Return: pointer to the head of the list
  */
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int counter = 0;
-	listint_t *tmp;
-	listint_t *tmp1;
-	if (head == NULL)
+	listint_t *c, *node;
+
+	if (*head == NULL)
+		return (NULL);
+
+	node = malloc(sizeof(*node));
+
+	if (node == NULL)
 	{
+		free(node);
+		node = NULL;
 		return (NULL);
 	}
-	tmp = *head;
-	if (tmp == NULL)
-	{
-		return (NULL);
-	}
-	tmp1 = malloc(sizeof(listint_t));
-	if (tmp1 == NULL)
-	{
-		return (NULL);
-	}
-	tmp1->n = n;
+
+	node->n = n;
+	node->next = NULL;
+	c = *head;
+
 	if (idx == 0)
 	{
-		tmp1->next = *head;
-		*head = tmp1;
-		return (tmp1);
+		node->next = c;
+		*head = node;
+		return (*head);
 	}
-	while (counter != idx - 1)
+
+	while (--idx)
 	{
-		tmp = tmp->next;
-		if (tmp == NULL)
-		{
-			free(tmp1);
+		if (c == NULL || c->next == NULL)
 			return (NULL);
-		}
-		counter++;
+		c = c->next;
 	}
-	tmp1->next = tmp->next;
-	tmp->next = tmp1;
-
-	return (tmp1);
-
+	node->next = c->next;
+	c->next = node;
+	return (node);
 }
