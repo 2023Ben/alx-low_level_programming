@@ -9,29 +9,29 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int num = 0, mult = 1;
-int l;
+unsigned int num1 = 0, mult = 1;
+int x;
 
 if (!b)
 {
 return (0);
 }
 
-for (l = 0; b[l];)
+for (x = 0; b[x];)
 {
-l++;
+x++;
 }
 
-for (l -= 1; l >= 0; l--)
+for (x -= 1; x >= 0; x--)
 {
-if (b[l] != '0' && b[l] != '1')
+if (b[x] != '0' && b[x] != '1')
 {
 return (0);
 }
 
-num += (b[l] - '0') * mult;
+num1 += (b[x] - '0') * mult;
 mult *= 2;
 }
 
-return (num);
+return (num1);
 }
